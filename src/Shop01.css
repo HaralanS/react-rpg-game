@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.seller-message {
+  background: white;
+  margin: auto;
+  text-align: center;
+  padding: 15px;
+  width: 80%;
+  border-radius: 15px;
+  border: 1px solid black;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+.modal {
+  background-image:url("./assets/backgrounds/shop-bg-01.png");
+  background-position: center;
+  height: 600px;
+  width: 500px;
+  border: solid 1px rgb(0, 0, 0);
+  margin: auto;
+  margin-top: 50px;
+  /* background: yellow; */
+  top: 99px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+
+}
+
+.modal h2 {
+  font-family: sans-serif;
+}
+
+.seller01-img {
+  position: relative;
+  height: 300px;
+  left: calc(100% - 70% - 150px);
+  top: 100px;
+}
+
+.shop-title {
+  height: 80px;
+  color: yellow;
+  text-align: center;
+  padding-top: 20px;
+  margin:  auto;
+  font-size: 40px;
+}
+
+.btn-shop-exit {
+  position: relative;
+  bottom: 40px;
+  left: 380px;
+  width: 100px;
+  text-align: center;
+  color: rgb(226, 200, 0);
+  border-radius: 15px;
+  border: 1px solid rgb(226, 200, 0);
+  font-size: 25px;
+  padding: 2px ;
+  background: darkred;
+  cursor: pointer;
+
+}
+
+.menu-seller-box {
+  height: 410px;
+  display: flex;
+}
+
+.shop-menu {
+  position: relative;
+  left: 10px;
+  background: gray;
+  height: 200px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  gap: 20px;
+  padding: 20px 5px;
+  /* justify-content: space-between; */
+  border-radius: 15px;
+  border: 1px solid white;
+  
+}
+
+.item-menu {
+  cursor: pointer;
+  background: rgb(61, 61, 62);
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.shop-message-box {
+  height: 100px;
+}
+
+.shop-stats {
+  position: relative;
+  left: 10px;
+  bottom: 220px;
+  background: gray;
+  width: 30%;
+  gap: 20px;
+  padding: 20px 15px;
+  border-radius: 15px;
+  height: 150px;
+  border: 1px solid white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.shop-stats p {
+  margin-bottom: 10px;
+}

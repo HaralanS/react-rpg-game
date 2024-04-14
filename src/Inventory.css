@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+.inventory-modal {
+  /* background-image:url("./assets/backgrounds/shop-bg-01.png");
+  background-position: center; */
+  background: rgb(53, 52, 52);
+  height: 600px;
+  width: 500px;
+  border: solid 1px rgb(0, 0, 0);
+  margin: auto;
+  margin-top: 50px;
+  /* background: yellow; */
+  top: 99px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+
+}
+.btn-inventory-exit {
+  position: relative;
+  top: 20px;
+  left: 380px;
+  width: 100px;
+  text-align: center;
+  color: rgb(226, 200, 0);
+  border-radius: 15px;
+  border: 1px solid rgb(226, 200, 0);
+  font-size: 25px;
+  padding: 2px ;
+  background: darkred;
+  cursor: pointer;
+
+}
+
+.items-box {
+  background: gray;
+  height: 440px;
+  width: 94%;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.items-box-top {
+  /* background: rgb(85, 84, 84); */
+  height: 200px;
+  width: 94%;
+  margin: auto;
+  /* border-radius: 5px; */
+  position: relative;
+  top: 20px;
+  display: flex;
+  gap: 4%;
+}
+.equipped-items {
+  width: 48%;
+  height: 100%;
+  /* background: rgb(207, 206, 206); */
+  border-radius: 10px;
+  display: flex;
+  gap: 4%;
+  flex-wrap: wrap;
+}
+.item-details {
+  width: 48%;
+  height: 100%;
+  background: rgb(207, 206, 206);
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px
+}
+.equipped-slot {
+  width: 48%;
+  height: 48%;
+  background: rgb(85, 84, 84);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.backpack {
+  height: 180px;
+  /* background: rgb(85, 84, 84); */
+  width: 94%;
+  margin: auto;
+  position: relative;
+  top: 40px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  justify-content: space-between;
+}
+.bp-slot {
+  width: 19%;
+  height: 46%;
+  background: rgb(85, 84, 84);
+  border-radius: 10px;  
+}
+.equipped-slot-img {
+  height: 98%;
+}
+
+.desc-bold {
+  font-weight: bold;
+}

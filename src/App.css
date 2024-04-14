@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-image: url("./assets/backgrounds/stone-brick-pattern-01.png");
+}
+
+.battle-screen {
+  background-image:url("./assets/characters/forest-bg-01.png");
+  background-position: center;
+  height: 600px;
+  width: 500px;
+  border: solid 1px rgb(0, 0, 0);
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 0 0 15px 10px black;
+}
+
+.main-screen {
+  background-image:url("./assets/backgrounds/camp-bg-01.png");
+  /* background: lightgray; */
+  background-position: center;
+  height: 600px;
+  width: 500px;
+  border: solid 1px rgb(0, 0, 0);
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 0 0 15px 10px black;
+}
+
+.hero-image {
+  transform: scaleX(-1);
+  position: relative;
+  left: calc(50% - 64px);
+  top: 140px;
+}
+
+.char-img-main{
+  transform: scaleX(-1);
+  height: 200px;
+  position: relative;
+  left: calc(50% - 100px);
+  top: 230px;
+}
+
+.monster-image{
+  position: relative;
+  left: calc(50% - 64px);
+  top: 150px;
+}
+
+.status-box {
+  background: darkred;
+  height: 80px;
+  border: 5px solid rgb(226, 200, 0);
+  display: flex;
+}
+
+.status-box div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 33%;
+  padding-left: 10px;
+}
+
+.status-box p {
+  font-family: sans-serif;
+  color: rgb(226, 200, 0);
+}
+
+.fight-box {
+  height: calc(100% - 260px);
+  display: flex;
+}
+
+.main-char-box {
+  height: calc(100% - 160px);
+  display: flex;
+}
+
+.bottom-box {
+  background: rgb(255, 0, 0);
+  height: 80px;
+  border: 5px solid rgb(226, 200, 0);
+}
+
+.main-bottom-box {
+  background: rgb(112, 57, 27);
+  height: 80px;
+  border: 5px solid rgb(226, 200, 0);
+  display: flex;
+}
+
+.main-bottom-box div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 33%;
+  padding-left: 10px;
+}
+
+.main-bottom-box p {
+  font-family: sans-serif;
+  color: rgb(226, 200, 0);
+}
+
+.hero-box {
+  background: rgba(0, 0, 255, 0.297);
+  width: 50%;
+}
+.monster-box {
+  background: rgba(0, 0, 255, 0.297);
+  width: 50%;
+}
+.battle-name {
+  position: relative;
+  top: 110px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  background: darkred;
+  padding: 1px 10px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto;
+  border: 1px solid rgb(226, 200, 0);
+  color: rgb(226, 200, 0);
+  
+}
+
+.life-count {
+  position: relative;
+  top: 115px;
+  color: black;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hero-life-bar {
+  position: relative;
+  top: 120px;
+  width: 100px;
+  margin: auto;
+  height: 10px;
+  background: red;
+}
+.hero-mana-bar {
+  position: relative;
+  top: 130px;
+  width: 100px;
+  margin: auto;
+  height: 10px;
+  background: rgb(208, 197, 210);
+}
+.monster-life-bar {
+  position: relative;
+  top: 120px;
+  width: 100px;
+  margin: auto;
+  height: 10px;
+  background: red;
+}
+
+.hero-health {
+  background: green;
+  height: 100%;
+  width: 100%;
+}
+.hero-mana {
+  background: rgb(160, 61, 188);
+  height: 100%;
+  width: 100%;
+}
+.monster-health {
+  background: green;
+  height: 100%;
+  width: 100%;
+}
+
+.attackButton {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.544);
+}
+.message-box {
+  background: rgba(0, 0, 255, 0.297);
+  height: 100px;
+}
+
+.fight-message {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 45px;
+  font-weight: bolder;
+  color: rgb(226, 200, 0);
+  /* box-shadow: 0 0 5px 5px black; */
+}
+
+.main-button {
+  background: dimgray;
+  border: 2px solid rgb(226, 200, 0);
+  padding: 3px;
+  border-radius: 5px;
+  color: rgb(226, 200, 0);
+  cursor: pointer;
+}
+
+#store-modal-id {
+  /* overflow-y: hidden; */
+}
+
+.active-modal {
+  overflow-y: hidden;
+}
+
+/* .game-bg {
+  background-image: url("./assets/backgrounds/stone-brick-pattern-01.png");
+  min-height: 100vh;
+
+} */
+
+.game-title {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(226, 200, 0);
+  font-family: sans-serif;
+  font-size: 50px;
+  background-color: darkred;
+  box-shadow: 0 0 10px 5px black;
+}
+
+.btn-new-game {
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(226, 200, 0);
+  font-family: sans-serif;
+  background-color: darkred;
+  border-radius: 30px;
+  padding: 2px 20px;
+  width: 300px;
+  border: 2px solid rgb(226, 200, 0);
+  box-shadow: 0 0 10px 5px black;
+  cursor: pointer;
+  position: relative;
+  left: calc(50% - 150px);
+
+}
+
+.start-page-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-img-start {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  left: calc(50% - 100px);
+  top: 50px;
+}
+
