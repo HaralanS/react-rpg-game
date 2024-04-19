@@ -10,6 +10,7 @@ import "../Inventory.css"
 import getItems from '../lists/items';
 
 let itemList = getItems();
+const experiencePerLevel = [0, 100, 220, 365, 540]
 // heroData.weaponEquiped;
 // itemList[weaponIndice].
 
@@ -124,8 +125,8 @@ function MainScreen() {
         <div className="main-bottom-box">
           <div>
             <p>Nome: {variavel.hero.name}</p>
-            <p>vida: {variavel.hero.life}</p>
-            <p>Level: {variavel.hero.level}</p>
+            <p>Vida: {variavel.hero.life}/{variavel.hero.maxLife}</p>
+            <p>Mana: {variavel.hero.mana}/{variavel.hero.maxMana}</p>
           </div>
           <div>
             <p>Gold: {variavel.hero.gold}</p>
@@ -133,22 +134,22 @@ function MainScreen() {
             <p>Pocoes de mana: {mpCount}</p>
           </div>
           <div>
-            <p>Mana: {variavel.hero.mana}</p>
+            <p>Experiencia: {variavel.hero.experience}</p>
             <p>Forca: {variavel.hero.strength}</p>
             <p>Poder Magico: {variavel.hero.magicPower}</p>
           </div>
           
         </div>
-          <div className="main-char-box">
-            <img className="char-img-main" src={warriorImage} alt="" />
+        <div className="main-char-box">
+          <img className="char-img-main" src={warriorImage} alt="" />
+        </div>
+          
+          
+        <div className="main-bottom-box">
+          <div>
+            <button className="main-button"><Link to="/battlepage">Lutar</Link></button>
           </div>
-          
-          
-          <div className="main-bottom-box">
-            <div>
-              <button className="main-button"><Link to="/battlepage">Lutar</Link></button>
-            </div>
-            <div>
+          <div>
               <button onClick={drinkLifePotion} className="main-button" >
                 Tomar pocao de vida
               </button>
@@ -165,6 +166,10 @@ function MainScreen() {
               </button>
             </div>
           </div>
+          <p className="level-text">Level {data.hero.level}</p>
+        <div className='hero-xp-bar'>
+          <div className='hero-xp' style={{width: `${100/(experiencePerLevel[data.hero.level] - experiencePerLevel[data.hero.level - 1]) * (data.hero.experience - experiencePerLevel[(data.hero.level - 1)])}%`}}><p className="xp-text">{Math.floor(100/(experiencePerLevel[data.hero.level] - experiencePerLevel[data.hero.level - 1]) * (data.hero.experience - experiencePerLevel[(data.hero.level - 1)]))}{`%`}</p></div>
+        </div>
         </div>
 
         {/* <div className="overlay"></div> */}
@@ -235,6 +240,8 @@ function MainScreen() {
           
         </div>
         </div>)}
+        
+        {/* {experiencePerLevel[(data.hero.level)] - data.hero.experience} */}
         
       </div>
       

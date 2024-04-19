@@ -217,10 +217,12 @@ body {
 
 #store-modal-id {
   /* overflow-y: hidden; */
+  
 }
 
 .active-modal {
   overflow-y: hidden;
+  
 }
 
 /* .game-bg {
@@ -273,3 +275,79 @@ body {
   top: 50px;
 }
 
+.hero-hit-n {
+  color: red;
+  font-weight: 600;
+  position: relative;
+  left: 115px;
+  bottom: 180px;
+  font-size: 24px;
+  visibility: hidden;
+}
+.monster-hit-n {
+  color: red;
+  font-weight: 600;
+  position: relative;
+  left: 360px;
+  bottom: 210px;
+  font-size: 24px;
+  visibility: hidden;
+}
+
+@keyframes subir {
+  0% {bottom: 180px;}
+  100% {bottom: 250px;}
+}
+
+@keyframes subir2 {
+  0% {bottom: 210px;;
+  }
+  100% {bottom: 280px;}
+}
+
+.hit-animaition1 {
+  visibility: visible;
+  animation: subir 1s;
+}
+.hit-animaition2 {
+  visibility: visible;
+  animation: subir 1s;
+}
+.hit-invisible{
+  visibility: hidden;
+}
+
+.hero-xp-bar {
+  position: relative;
+  bottom: 345px;
+  width: 200px;
+  margin: auto;
+  height: 20px;
+  background: rgb(126, 126, 126);
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+
+.hero-xp {
+  background: rgb(237, 237, 237);
+  height: 100%;
+  width: 100%;
+}
+
+.xp-text {
+  position: relative;
+  left: 80px;
+  font-weight: 600;
+}
+
+.level-text {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  bottom: 345px;
+  font-weight: bold;
+  color: white;
+  font-size: 24px;
+}

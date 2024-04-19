@@ -5,25 +5,25 @@ function BattleScreen(props) {
   let variavel = JSON.parse(localStorage.getItem('GameData'))
   return (
     <div className='battle-screen'>
-        <div className='status-box'>
+      <div className='status-box'>
         <div>
-            <p>Nome: {variavel.hero.name}</p>
-            <p>vida: {variavel.hero.life}</p>
-            <p>Level: {variavel.hero.level}</p>
-          </div>
-          <div>
-            <p>Gold: {variavel.hero.gold}</p>
-            <p>Pocoes de vida: {variavel.hero.lifePotion}</p>
-            <p>Pocoes de mana: {variavel.hero.manaPotion}</p>
-          </div>
-          <div>
-            <p>Mana: {variavel.hero.mana}</p>
-            <p>Forca: {variavel.hero.strength}</p>
-            <p>Poder Magico: {variavel.hero.magicPower}</p>
-          </div>
+          <p>Nome: {variavel.hero.name}</p>
+          <p>vida: {variavel.hero.life}</p>
+          <p>Level: {variavel.hero.level}</p>
         </div>
+        <div>
+          <p>Gold: {variavel.hero.gold}</p>
+          <p>Pocoes de vida: {variavel.hero.lifePotion}</p>
+          <p>Pocoes de mana: {variavel.hero.manaPotion}</p>
+        </div>
+        <div>
+          <p>Mana: {variavel.hero.mana}</p>
+          <p>Forca: {variavel.hero.strength}</p>
+          <p>Poder Magico: {variavel.hero.magicPower}</p>
+        </div>
+      </div>
 
-        <div className='message-box'><h2 className='fight-message'>{props.message}</h2></div>
+      <div className='message-box'><h2 className='fight-message'>{props.message}</h2></div>
 
         <div className='fight-box'>
           <div className='hero-box'>
@@ -52,7 +52,9 @@ function BattleScreen(props) {
           <button disabled={props.dibledBtn} onClick={props.specialAtackHero} className='attackButton'>Special Atack</button>
           <button><Link to="/mainscreen">Voltar</Link></button>       
         </div>
-        </div>
+        <p className={`hero-hit-n ${props.heroHit}`}>{props.Hatack}</p>
+        <p className={`monster-hit-n ${props.monsterHit}`}>{props.Matack}</p>
+    </div>
   )
 }
 

@@ -54,6 +54,10 @@ function BattlePage() {
   const [message, setMessage] = useState("Fight");
   const [data, setData] = useState(JSON.parse(localStorage.getItem('GameData')));
   const [disableAtkBtn, setDisableAtkBtn] = useState(false);
+  const [heroHit, setHeroHit] = useState("");
+  const [monsterHit, setMonsterHit] = useState("");
+  const [heroAttackValue, setHeroAttackValue] = useState(0);
+  const [monsterAttackValue, setMonsterAttackValue] = useState(0);
   // const [data, setData] = useState({
   //   hero: {
   //     name: "Hara",
@@ -233,8 +237,12 @@ function BattlePage() {
       setData(dataProvisorio);
       
       if(chosenMonster.life > 0) {
+        setMonsterAttackValue(attack)
+        setMonsterHit("hit-animaition2")
         setTimeout(() => {
           attack = parseInt(monsterAttack(chosenMonster));
+          setMonsterHit("hit-invisible")
+          
   
 
           dataProvisorio.hero.life = attack > dataProvisorio.hero.life ? 0 : dataProvisorio.hero.life - attack;;
@@ -242,8 +250,12 @@ function BattlePage() {
           setMessage(`Voce levou um dano de ${attack}`);
           setData(dataProvisorio);
           setDisableAtkBtn(false);
+          setHeroAttackValue(attack)
+          setHeroHit("hit-animaition1")
           // console.log("Delayed for 1 second.");s
-        }, "1000");
+        }, "1000");  
+        setHeroHit("hit-invisible")      
+        
         // console.log(hero.life + " - " + goblin.life);
       } else {
         lootGold(dataProvisorio.hero, chosenMonster.gold);
@@ -277,8 +289,13 @@ function BattlePage() {
       setData(dataProvisorio);
       
       if(chosenMonster.life > 0) {
+        setMonsterAttackValue(attack)
+        setMonsterHit("hit-animaition2")
         setTimeout(() => {
           attack = parseInt(monsterAttack(chosenMonster));
+          setMonsterHit("hit-invisible")
+          setHeroAttackValue(attack)
+          setHeroHit("hit-animaition1")
   
 
           dataProvisorio.hero.life = attack > dataProvisorio.hero.life ? 0 : dataProvisorio.hero.life - attack;;
@@ -288,6 +305,8 @@ function BattlePage() {
           setDisableAtkBtn(false);
           // console.log("Delayed for 1 second.");s
         }, "1000");
+        setHeroHit("hit-invisible")
+
         // console.log(hero.life + " - " + goblin.life);
       } else {
         lootGold(dataProvisorio.hero, chosenMonster.gold);
@@ -312,7 +331,7 @@ function BattlePage() {
       {/* <img src={goblinImage} alt="" /> */}
       
       <div className='screen'>
-      <BattleScreen message={message} heroHBar={heroHBar} monsterHBar={monsterHBar} specialAtackHero={() => specialAtackHero()} meleeAtackHero={() => meleeAtackHero()} monsterLife={chosenMonster.life} monsterImage={chosenMonster.image} heroProp={data.hero} monsterName={chosenMonster.name} dibledBtn={disableAtkBtn}/>
+      <BattleScreen message={message} heroHBar={heroHBar} monsterHBar={monsterHBar} specialAtackHero={() => specialAtackHero()} meleeAtackHero={() => meleeAtackHero()} monsterLife={chosenMonster.life} monsterImage={chosenMonster.image} heroProp={data.hero} monsterName={chosenMonster.name} dibledBtn={disableAtkBtn} heroHit={heroHit} monsterHit={monsterHit} Hatack={heroAttackValue} Matack={monsterAttackValue}/>
        
       </div>
     </div>
